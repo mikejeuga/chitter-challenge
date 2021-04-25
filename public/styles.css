@@ -1,0 +1,159 @@
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    
+}
+body {
+    height: 100%;
+    background-color: #132c33;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.home-container {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh;
+  gap: 1%;
+
+}
+
+.greeter {
+  color: #f8f5f1;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 1900;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.go-peeps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-to-feed {
+  background-color: #393e46;
+  color: whitesmoke;
+  font-size: 24px;
+  padding: 20px 25px;
+  margin: 5%;
+  border-radius: 12px;
+  border: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+.submit-peep {
+  background-color: #393e46;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 6px 15px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+.delete-peep {
+  background-color: #393e46;
+  color: whitesmoke;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+.go-to-feed:hover, .submit-peep:hover, .delete-peep:hover {
+  cursor: pointer;
+  color: #1c1427;
+  font-weight: bold;
+  background-color: #ec524b;
+}
+
+
+.feed-container {
+ display: grid;
+ grid-template-rows: 2fr 6fr 1fr;
+ height: 100vh;
+ gap: 1%;
+}
+
+.feed-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.chitter {
+  color: #f8f5f1;
+  font-family: 'Merriweather Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  max-width: 300px;
+  padding: auto;
+}
+
+.peep-form {
+  font-family: 'Inconsolata', monospace;
+  color: whitesmoke;
+  font-size: 24px;
+  display: contents;
+  align-items: center;
+  text-align: start;
+}
+
+.write-peep {
+  width: 35%;
+  height: 50%;
+  font-size: 15px;
+
+}
+
+.peep-box {
+  font-size: 24px;
+}
+
+.word-limit {
+  font-size: 15px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family: 'Inconsolata', monospace;
+}
+
+.feed-thread {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+}
+
+.chitter-feed{
+   text-align: center;
+   width: 100%;
+   color: #222831;
+   background-color: #f39189;
+   font-family: 'Shadows Into Light', cursive;
+   font-weight: 300;
+   font-size: 24px;
+
+}
+
+.chitter-feed.h2 {
+  font-family: 'Inconsolata', monospace;
+}

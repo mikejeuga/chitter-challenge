@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<%= url("styles.css") %>" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="feed-container">
+<header class="feed-header">
+<div class="chitter">Chitter</div>
+<div class="peep-box">
+<form class="peep-form" action="/feed/new" method="post">Compose new Peep <br />
+<textarea class="write-peep" name="message" placeholder="What's good?" require></textarea>
+<label class="word-limit">280</label>
+<input type="submit" class="submit-peep" value="Peep">
+</form>
+</div>
+</header>
+
+<main class="feed-thread">
+
+<div class="feed-left"></div>
+
+<div class="chitter-feed">
+<h2>Chitter feed</h2>
+<ul class="peep-ul"></ul>
+  <% @peeps.map do |peep| %>
+  <li class="feed-list-item">
+  <%= peep.message %><br />
+  <%= peep.create_date[0..15] %>
+  </li>
+  <% end %>
+  </ul>
+  </div>
+
+<div class="feed-right"></div>
+</main>
+
+
+ <footer>
+  <div class="credit">
+      <p>&copy; Michael Jeuga &nbsp;-&nbsp; Blue March 2021.</p>
+    </div>
+</footer>
+</div>
+    
+</body>
+</html>
